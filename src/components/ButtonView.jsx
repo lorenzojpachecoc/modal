@@ -1,12 +1,12 @@
 import React from 'react'
 import '../App.css'
 
-export const ButtonView = ({handleOpen}) => {
+export const ButtonView = ({handleModal}) => {
   return (
     <div className="container-button">
     <button 
     className='button'
-    onClick={handleOpen}
+    onClick={handleModal}
     >
         Abrir Modal
         </button>

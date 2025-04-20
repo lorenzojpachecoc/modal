@@ -7,24 +7,24 @@ import { ModalView } from './components/ModalView'
 
 export const App = () => {
 
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
 
- const handleOpen = () =>{
-  setOpen(true)
+ const handleModal = () =>{
+  setOpen(
+    !open
+  )
+  
 
  }
 
- const handleClosed =() =>{
-  setOpen(false)
- }
+ 
 
   return (
     <>
-      <ButtonView handleOpen={handleOpen} />
-      { open &&
-      <ModalView handleClosed={handleClosed} open={open} />
+      <ButtonView handleModal={handleModal} />
+      { open &&<ModalView handleModal={handleModal}  />
     }
-    <h1>hola</h1>
+ 
     </>
   )
 }
